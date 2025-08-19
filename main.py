@@ -1,9 +1,9 @@
 import streamlit as st
 
-st.title('나의 첫 웹 서비스 만들기!!')
+st.title('실!!')
 
 # 사용자 입력 받기
-name = st.text_input('이름을 입력해주세요 : ')
+name = st.text_input('이름을 대라라 : ')
 mbti = st.selectbox('MBTI를 선택해주세요:', [
     'INTJ', 'INTP', 'ENTJ', 'ENTP', 'INFJ', 'INFP', 'ENFJ', 'ENFP', 
     'ISTJ', 'ISFJ', 'ESTJ', 'ESFJ', 'ISTP', 'ISFP', 'ESTP', 'ESFP'
@@ -103,7 +103,7 @@ mbti_data = {
         '잘 맞는 MBTI': ['ESFJ', 'ESTJ']
     },
     'ISFP': {
-        '특징': '감정적이고 예술적인 유형으로, 높은 감정 지능을 지니고 있습니다. '
+        '특징': '감정적이고 예술적인 유형으로, 높은 감정 지능을 지니고 있습니다. 김무성입니다. '
                '강한 내면의 가치를 지니고 있으며, 다른 사람의 감정을 잘 이해하고 공감합니다. '
                '창의적이고 독창적인 아이디어를 많이 가지고 있으며, 예술이나 문학 분야에서 두각을 나타냅니다.',
         '직업': '예술가, 음악가, 디자이너, 상담사, 교사',

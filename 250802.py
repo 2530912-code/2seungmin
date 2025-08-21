@@ -1,6 +1,8 @@
 import streamlit as st
 
+"""
 st.set_page_config(page_title="Burger Builder 🍔")
+"""
 
 st.title("🍔 나만의 버거 만들기")
 

@@ -1,26 +1,24 @@
 import streamlit as st
 
-st.title("간단 계산기")
+st.set_page_config(page_title="Burger Builder 🍔")
 
-# 사용자 입력 받기
-num1 = st.number_input("첫 번째 숫자 입력", value=0)
-num2 = st.number_input("두 번째 숫자 입력", value=0)
+st.title("🍔 나만의 버거 만들기")
 
-operation = st.selectbox("연산 선택", ["더하기", "빼기", "곱하기", "나누기"])
+# 선택지
+buns = ["참깨빵", "브리오슈", "바게트"]
+patties = ["소고기", "닭고기", "두부"]
+toppings = ["양상추", "토마토", "피클", "양파"]
+sauces = ["케첩", "마요네즈", "바베큐"]
 
-if st.button("계산하기"):
-    if operation == "더하기":
-        result = num1 + num2
-    elif operation == "빼기":
-        result = num1 - num2
-    elif operation == "곱하기":
-        result = num1 * num2
-    else:  # 나누기
-        if num2 == 0:
-            st.error("0으로 나눌 수 없습니다!")
-            result = None
-        else:
-            result = num1 / num2
+# 입력 받기
+bun = st.radio("1. 빵을 선택하세요:", buns)
+patty = st.radio("2. 패티를 선택하세요:", patties)
+selected_toppings = st.multiselect("3. 토핑을 선택하세요:", toppings)
+sauce = st.selectbox("4. 소스를 선택하세요:", sauces)
 
-    if result is not None:
-        st.success(f"결과: {result}")
+# 결과 출력
+if st.button("🍔 내 버거 완성!"):
+    st.success("당신의 버거가 완성되었습니다!")
+    burger = f"[ {bun} + {patty} + {', '.join(selected_toppings)} + {sauce} ]"
+    st.markdown(f"### 🍔 `{burger}`")
+

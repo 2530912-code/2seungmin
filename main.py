@@ -1,9 +1,9 @@
 import streamlit as st
 
-st.title('실!!')
+st.title('MBTI 검사기')
 
 # 사용자 입력 받기
-name = st.text_input('이름을 대라라 : ')
+name = st.text_input('이름을 입력하세요 : ')
 mbti = st.selectbox('MBTI를 선택해주세요:', [
     'INTJ', 'INTP', 'ENTJ', 'ENTP', 'INFJ', 'INFP', 'ENFJ', 'ENFP', 
     'ISTJ', 'ISFJ', 'ESTJ', 'ESFJ', 'ISTP', 'ISFP', 'ESTP', 'ESFP'
